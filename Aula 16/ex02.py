@@ -1,2 +1,2 @@
 lanche = ('Hambúrguer', 'Suco', 'Pizza', 'Pudim')
-print(lanche)
+print(lanche[1])
