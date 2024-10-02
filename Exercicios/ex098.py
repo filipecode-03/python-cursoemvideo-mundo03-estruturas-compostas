@@ -1,27 +1,33 @@
 from time import sleep
 def linha():
     print('-=' * 30)
-    for c in range(10, -1, -2):
-        print(c, end=' ', flush=True)
-        sleep(0.5)
-    print('FIM!')
 def cont(i, f, p):
+    if p < 0:
+        p *= -1
+    if p == 0:
+        p = 1
     linha()
     print(f'Contagem de {i} até {f} de {p} em {p}')
-    if p > 0:
-        for c in range(i, f+1, p):
-            print(c, end=' ', flush=True)
+    sleep(2.5)
+    if i < f:
+        cont = i
+        while cont <= f:
+            print(f'{cont} ', end='', flush=True)
             sleep(0.5)
+            cont += p
+        print('FIM!')
     else:
-        for c in range(i, f-1, p):
-            print(c, end=' ', flush=True)
+        cont = i
+        while cont >= f:
+            print(f'{cont} ', end='', flush=True)
             sleep(0.5)
-linha()
-cont()
-linha()
-cont()
+            cont -= p
+        print('FIM!')    
+cont(1, 10, 1)
+cont(10, 0, 2)
 linha()
 print('Agora é sua vez de personalizar a contagem!')
-cont(int(input('Inicio: ')), 
-     int(input('Fim: ')),
-     int(input('Passo: ')))
+ini = int(input('Inicio: ')) 
+fim = int(input('Fim: '))
+pas = int(input('Passo: '))
+cont(ini, fim, pas)
