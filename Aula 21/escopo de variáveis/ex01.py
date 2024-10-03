@@ -5,4 +5,4 @@ def teste():
 n = 2
 print(f'No programa principal, n vale {n}')
 teste()
-print(f'No programa principal, x vale {x}')
+print('No programa principal, x vale {x}') # o x não vai funcionar por que ele é uma variável local, ou seja uma variável que pertence ao def
