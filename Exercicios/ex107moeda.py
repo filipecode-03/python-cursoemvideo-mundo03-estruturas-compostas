@@ -1,10 +1,10 @@
-def aumentar(num): 
-    aumento = num * (10 / 100)
+def aumentar(num, taxa): 
+    aumento = num * (taxa / 100)
     novo_valor = num + aumento
     return novo_valor
 
-def diminuir(num):
-    desconto = num * (10 / 100)
+def diminuir(num, taxa):
+    desconto = num * (taxa / 100)
     novo_valor = num - desconto
     return novo_valor
  
