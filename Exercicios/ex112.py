@@ -1,3 +1,3 @@
-from utilidadesCeV import moeda
-valor = float(input('Digite o preço: R$'))
+from utilidadesCeV import moeda, dado
+valor = dado.leiaDinheiro('Digite o preço: R$')
 moeda.resumo(valor, 35, 22)
